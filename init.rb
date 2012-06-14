@@ -1,5 +1,7 @@
 require 'redmine'
 require 'dispatcher'
+require 'bitly'
+Bitly.use_api_version_3
 
 Dispatcher.to_prepare do
   require_dependency 'bitly_host/patches/application_controller_patch'

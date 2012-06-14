@@ -29,24 +29,20 @@ module BitlyHost::Patches::ApplicationControllerPatch
     end
 
     def bitly_redirect?(controller)
-      debugger
       hash = controller.request.path[1..-1]
 
       return false if hash.include?('/')
 
-      bitly = Bitly.new(Setting.plugin_bitly_host["username"],
-                        Setting.plugin_bitly_host["api_key"])
+      client = BitlyHost.client
 
-      info = bitly.info(hash)
+      return false if client.nil?
+
+      info = client.expand(hash)
 
       return false if info.long_url.blank?
 
       redirect_to info.long_url, :status => :moved_permanently
       true
-
-    rescue BitlyError
-      #TODO log error
-      false
     end
   end
 end
