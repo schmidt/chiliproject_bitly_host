@@ -10,6 +10,10 @@ In case of a naming conflict, ChiliProject's URLs will always have precedence.
 So http://example.com/projects will always point to your project list.
 
 
+*Warning:* This is work in progress. I have not written any tests yet. Use at
+own risk.
+
+
 == Requirements
 
 This plugin aims to be compatible with
@@ -56,9 +60,9 @@ Remove the Plugin from vendor/plugins
 
 == Development
 
-*To be honest*, there are no tests yet. But that's the very reason, why this
-plugin still has no 1.x version number. But once, the tests are in place, you
-will likely need to do the following to run them.
+<b>To be honest</b>, there are no tests yet. But that's the very reason, why
+this plugin still has no 1.x version number. But once, the tests are in place,
+you will likely need to do the following to run them.
 
 To run the tests, you will need a current version of the {ChiliProject Dev
 Tools}[https://github.com/schmidt/chiliproject_devtools]. After running
