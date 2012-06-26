@@ -40,7 +40,7 @@ setting page (Administration -> Plugins -> Bitly Host). You may find your API
 key on http://bitly.com/a/settings/advanced. It is called 'Legacy API key'
 there.
 
-Without the proper credentials the plugin will just do nothing - expect burning
+Without the proper credentials the plugin will just do nothing - except burning
 CPU cycles.
 
 
